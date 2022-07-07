@@ -14,6 +14,11 @@ export default defineConfig({
       format: 'cjs',
       strict: false,
     },
+    {
+      file: `dist/${manifest.name}.js`,
+      format: 'cjs',
+      strict: false,
+    },
   ],
   plugins: [nodeResolve(), commonjs(), json(), esbuild({ minify: true, target: 'ES2019' })],
 });
