@@ -2,6 +2,7 @@ import { Plugin, registerPlugin } from 'enmity/managers/plugins';
 import { getByProps } from 'enmity/metro';
 import { makeStore } from 'enmity/api/settings';
 import { create } from 'enmity/patcher';
+import { React } from 'enmity/metro/common';
 import manifest from '../manifest.json';
 
 import Settings from './components/Settings';
