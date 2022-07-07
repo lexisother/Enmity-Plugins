@@ -1,0 +1,19 @@
+import { FormRow, ScrollView } from 'enmity/components';
+import { SettingsStore } from 'enmity/api/settings';
+import { React } from 'enmity/metro/common';
+
+interface SettingsProps {
+  settings: SettingsStore;
+}
+
+export default ({ settings }: SettingsProps) => {
+  return (
+    <ScrollView>
+      <FormRow
+        label="Reset messageStore"
+        trailing={FormRow.Arrow}
+        onPress={() => settings.set('messageStore', [])}
+      />
+    </ScrollView>
+  );
+};
